@@ -43,7 +43,7 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
-
+  array.forEach(x => { cb(x);})
      
   
 }
@@ -54,6 +54,11 @@ function map(array, cb) {
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
   
+    let nuevoArray = [];
+    array.map(function(x){
+      nuevoArray.push(cb(x))
+    })
+    return nuevoArray;
 
         
 }
